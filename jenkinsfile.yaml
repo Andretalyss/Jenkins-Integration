@@ -1,4 +1,6 @@
-node:
+pipeline:
+    agent:
+        none:
     stages:
     - stage: "Teste"
       steps:
