@@ -3,15 +3,11 @@ pipeline:
         node:
             label: 'NODE-JENKINS'
     stages:
-    - stage: "Teste"
+    - stage: "Git Clone"
       steps:
-      - echo "Olá, mundo!"
+        script:
+        - checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'jenkins', url: 'git@github.com:Andretalyss/ScaledRunnersGITLAB.git']]])
       
-    - stage: "Paralelo"
-      parallel:
-        - stage: "Parallel 1"
-          steps:
-          - echo "Executando em paralelo"
-        - stage: "Parallel 2"
-          steps:
-          - echo "Tudo em paralelo"
+    - stage: "Verificando Clone"
+      steps:
+        - ls -a
