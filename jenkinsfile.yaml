@@ -6,7 +6,7 @@ pipeline:
     - stage: "Git Clone"
       steps:
         script:
-        - "git clone https://github.com/Andretalyss/ScaledRunnersGITLAB.git"
+        - git clone github.com/Andretalyss/ScaledRunnersGITLAB.git
     - stage: "Verificando Clone"
       steps:
         - ls -a
