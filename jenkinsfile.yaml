@@ -1,0 +1,14 @@
+pipeline:
+    stages:
+    - stage: "Teste"
+      steps:
+      - echo "Olá, mundo!"
+      
+    - stage: "Paralelo"
+      parallel:
+        - stage: "Parallel 1"
+          steps:
+          - echo "Executando em paralelo"
+        - stage: "Parallel 2"
+          steps:
+          - echo "Tudo em paralelo"
