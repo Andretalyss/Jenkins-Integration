@@ -6,8 +6,7 @@ pipeline:
     - stage: "Git Clone"
       steps:
         script:
-        - checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'jenkins', url: 'git@github.com:Andretalyss/ScaledRunnersGITLAB.git']]])
-      
+        - git clone https://github.com/Andretalyss/ScaledRunnersGITLAB.git
     - stage: "Verificando Clone"
       steps:
         - ls -a
