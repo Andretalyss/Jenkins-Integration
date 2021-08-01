@@ -9,4 +9,4 @@ pipeline:
         - sh "git clone https://github.com/Andretalyss/ScaledRunnersGITLAB.git"
     - stage: "Verificando Clone"
       steps:
-        - ls -a
+        - sh "ls -a"
