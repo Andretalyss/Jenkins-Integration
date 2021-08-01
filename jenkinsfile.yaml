@@ -1,7 +1,7 @@
 pipeline:
     agent:
         node:
-            label: 'JENKINS-NODE'
+            label: 'NODE-JENKINS'
     stages:
     - stage: "Teste"
       steps:
